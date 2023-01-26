@@ -1,8 +1,15 @@
-// import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
+import QuizList from './components/QuizList/QuizList';
+import quizzes from './data/quizzes.json';
 
 function App() {
-  return <h1>hello</h1>;
+  return (
+    <>
+      <div className='App'>
+        <QuizList quizzes={quizzes} />
+      </div>
+    </>
+  );
 }
 
 export default App;
