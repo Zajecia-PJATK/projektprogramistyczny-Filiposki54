@@ -15,7 +15,7 @@ const QuizList = ({ quizzes }) => {
         <ul>
           {quizList.map((quiz, index) => (
             <li key={index}>
-              <Link to={`/quiz:${quiz.title}`}>{quiz.title}</Link>
+              <Link to={`/quiz/${quiz.title}`}>{quiz.title}</Link>
             </li>
           ))}
         </ul>
