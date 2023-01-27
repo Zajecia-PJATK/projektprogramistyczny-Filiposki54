@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import QuizList from './components/QuizList/QuizList';
-import Quiz from './components/Quiz/Quiz';
+import QuizPage from './components/Quiz/QuizPage';
 import quizzes from './data/quizzes.json';
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
     <>
       <Routes>
         <Route path='/' element={<QuizList quizzes={quizzes} />} />
-        <Route path='/quiz/:title' element={<Quiz />} />
+        <Route path='/quiz/:title' element={<QuizPage />} />
         <Route path='*' element={<h1>PAGE NOT FOUND</h1>} />
       </Routes>
     </>
