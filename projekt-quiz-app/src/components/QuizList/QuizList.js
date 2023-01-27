@@ -1,5 +1,6 @@
 import './QuizList.css';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 const QuizList = ({ quizzes }) => {
   const [quizList, setQuizList] = useState([]);
 
@@ -13,7 +14,9 @@ const QuizList = ({ quizzes }) => {
         <h1>QuizList</h1>
         <ul>
           {quizList.map((quiz, index) => (
-            <li key={index}>{quiz.title}</li>
+            <li key={index}>
+              <Link to={`/quiz:${quiz.title}`}>{quiz.title}</Link>
+            </li>
           ))}
         </ul>
       </div>
