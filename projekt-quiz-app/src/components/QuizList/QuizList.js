@@ -1,11 +1,12 @@
 import './QuizList.css';
 import React, { useEffect, useState } from 'react';
-
-export default function QuizList({ quizzes }) {
+const QuizList = ({ quizzes }) => {
   const [quizList, setQuizList] = useState([]);
+
   useEffect(() => {
     setQuizList(quizzes);
   }, [quizzes]);
+
   return (
     <>
       <div className='quizlist'>
@@ -18,4 +19,6 @@ export default function QuizList({ quizzes }) {
       </div>
     </>
   );
-}
+};
+
+export default QuizList;
