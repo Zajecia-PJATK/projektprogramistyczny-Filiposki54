@@ -5,5 +5,27 @@
 }
 
 .quizlist {
-  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.quizlist h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.quizlist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quizlist li {
+  margin-top: 0.5rem;
+}
+
+.quizlist a {
+  text-decoration: none;
+  color: black;
 }
