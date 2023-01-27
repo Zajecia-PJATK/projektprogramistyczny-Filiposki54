@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import QuizList from './components/QuizList/QuizList';
-import QuizPage from './components/Quiz/QuizPage';
+import QuizPage from './components/QuizPage/QuizPage';
 import quizzes from './data/quizzes.json';
 
 const App = () => {
