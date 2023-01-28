@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import quizzes from '../../data/quizzes.json';
+import quizzes from '../data/quizzes.json';
 import SingleChoice from '../SingleChoice/SingleChoice';
 import MultipleChoice from '../MultipleChoice/MultipleChoice';
 import TrueFalse from '../TrueFalse/TrueFalse';
@@ -12,8 +12,8 @@ const QuizPage = () => {
   const quiz = quizzes.find((q) => q.title === title);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
-  const [points, setPoints] = useState(0);
-  const [name, setName] = useState('');
+  const [userName, setUserName] = useState('');
+  const [score, setScore] = useState(0);
 
   const handleNextQuestion = () => {
     setCurrentQuestion(currentQuestion + 1);
@@ -27,6 +27,14 @@ const QuizPage = () => {
   const handleOptionSelection = (option) => {
     setSelectedOption(option);
   };
+
+  // const handleUserName = (name) => {
+  //   setUserName(name);
+  // };
+
+  // if (!userName) {
+  //   return <NamePrompt handleUserName={handleUserName} />;
+  // }
 
   return (
     <>

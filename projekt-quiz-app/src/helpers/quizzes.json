@@ -34,27 +34,6 @@
         "question": "What is the capital city of Australia?",
         "type": "shortAnswer",
         "correctAnswer": "Canberra"
-      },
-      {
-        "question": "What is the smallest planet in our solar system?",
-        "type": "dropdown",
-        "options": ["Mercury", "Venus", "Earth", "Mars"],
-        "correctAnswer": "Mercury"
-      },
-      {
-        "question": "Match the following countries with their capitals:",
-        "type": "matching",
-        "pairs": [
-          { "question": "France", "answer": "Paris" },
-          { "question": "Germany", "answer": "Berlin" },
-          { "question": "Italy", "answer": "Rome" },
-          { "question": "Spain", "answer": "Madrid" }
-        ]
-      },
-      {
-        "question": "Fill in the blank: The _____ is the largest mammal in the world.",
-        "type": "fillInTheBlank",
-        "correctAnswer": "whale"
       }
     ]
   }
