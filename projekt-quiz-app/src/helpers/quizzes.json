@@ -1,6 +1,41 @@
 [
   {
-    "title": "Quiz",
+    "title": "Math Quiz",
+    "questions": [
+      {
+        "question": "What is the result of 2+2?",
+        "type": "singleChoice",
+        "answers": [
+          { "answer": "4", "correct": true },
+          { "answer": "6", "correct": false },
+          { "answer": "8", "correct": false },
+          { "answer": "10", "correct": false }
+        ]
+      },
+      {
+        "question": "What is the result of 5*5?",
+        "type": "singleChoice",
+        "answers": [
+          { "answer": "25", "correct": true },
+          { "answer": "30", "correct": false },
+          { "answer": "35", "correct": false },
+          { "answer": "40", "correct": false }
+        ]
+      },
+      {
+        "question": "What is the result of 8/2?",
+        "type": "singleChoice",
+        "answers": [
+          { "answer": "4", "correct": true },
+          { "answer": "3", "correct": false },
+          { "answer": "2", "correct": false },
+          { "answer": "6", "correct": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "History Quiz",
     "questions": [
       {
         "question": "Who was the first president of the United States?",
@@ -14,7 +49,7 @@
       },
       {
         "question": "In what year did World War II begin?",
-        "type": "multipleChoice",
+        "type": "singleChoice",
         "answers": [
           { "answer": "1939", "correct": true },
           { "answer": "1940", "correct": false },
@@ -23,17 +58,14 @@
         ]
       },
       {
-        "question": "Was Germany a member of the Axis powers during World War II?",
-        "type": "truefalse",
+        "question": "Which event marked the end of World War II?",
+        "type": "singleChoice",
         "answers": [
-          { "answer": "True", "correct": true },
-          { "answer": "False", "correct": false }
+          { "answer": "Battle of Stalingrad", "correct": false },
+          { "answer": "D-Day", "correct": false },
+          { "answer": "Battle of the Bulge", "correct": false },
+          { "answer": "Surrender of Japan", "correct": true }
         ]
-      },
-      {
-        "question": "What is the capital city of Australia?",
-        "type": "shortAnswer",
-        "correctAnswer": "Canberra"
       }
     ]
   }
