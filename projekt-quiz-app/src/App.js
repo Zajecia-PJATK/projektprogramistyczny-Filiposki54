@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import QuizList from './Pages/QuizList/QuizList';
+import QuizList from './Pages/QuizList';
 import QuizPage from './Pages/QuizPage';
 import quizzes from './helpers/quizzes.json';
 import Menu from './Pages/Menu';

@@ -1,4 +1,3 @@
-import './QuizList.css';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 const QuizList = ({ quizzes }) => {
@@ -10,11 +9,11 @@ const QuizList = ({ quizzes }) => {
 
   return (
     <>
-      <div className='quizlist'>
-        <h1>QuizList</h1>
-        <ul>
+      <div className='quiz-list-container'>
+        <h1 className='quiz-list-header'>QuizList</h1>
+        <ul className='quiz-list'>
           {quizList.map((quiz, index) => (
-            <li key={index}>
+            <li className='quiz-list-element' key={index}>
               <Link to={`/quiz/${quiz.title}`}>{quiz.title}</Link>
             </li>
           ))}

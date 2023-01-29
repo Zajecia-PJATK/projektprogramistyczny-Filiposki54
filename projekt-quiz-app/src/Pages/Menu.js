@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom';
 
 const Menu = () => {
   return (
-    <div className='Menu'>
-      <h1>Menu</h1>
-      <Link to='/quizList'>Zagraj</Link>
+    <div className='menu'>
+      <h1 className='menu-header'>Menu</h1>
+      <Link to='/quizList'>
+        <span className='menu-link'>Zagraj</span>
+      </Link>
       <br></br>
-      <Link to='/addQuiz'>Dodaj własny Quiz</Link>
+      <Link to='/addQuiz'>
+        <samp className='menu-link'>Dodaj własny Quiz</samp>
+      </Link>
     </div>
   );
 };

@@ -28,12 +28,15 @@ const QuizPage = () => {
 
   if (!showQuiz) {
     return (
-      <div>
-        <label>
+      <div className='name-prompt-container'>
+        <label className='name-prompt-label'>
           Name:
           <input type='text' value={name} onChange={handleChange} />
         </label>
-        <button disabled={!name} onClick={() => setShowQuiz(true)}>
+        <button
+          className='name-prompt-btn-submit'
+          disabled={!name}
+          onClick={() => setShowQuiz(true)}>
           Start Quiz
         </button>
       </div>
@@ -43,12 +46,15 @@ const QuizPage = () => {
   return (
     <>
       {quiz.questions[currentQuestion].type === 'singleChoice' ? (
-        <div>
-          <h1>{quiz.title}</h1>
+        <div className='quiz-container'>
+          <h1 className='quiz-title'>{quiz.title}</h1>
           <div className='singleChoice'>
-            <h3>{quiz.questions[currentQuestion].question}</h3>
+            <h3 className='quiz-question'>
+              {quiz.questions[currentQuestion].question}
+            </h3>
             {quiz.questions[currentQuestion].answers.map((answer, index) => (
               <button
+                className='quiz-answer-btn'
                 key={index}
                 onClick={() => setOptionChosen(answer.correct)}>
                 {answer.answer}
@@ -57,13 +63,16 @@ const QuizPage = () => {
           </div>
         </div>
       ) : quiz.questions[currentQuestion].type === 'multipleChoice' ? (
-        <div>
-          <h1>{quiz.title}</h1>
+        <div className='quiz-container'>
+          <h1 className='quiz-title'>{quiz.title}</h1>
           <div className='multipleChoice'>
-            <h3>{quiz.questions[currentQuestion].question}</h3>
+            <h3 className='quiz-question'>
+              {quiz.questions[currentQuestion].question}
+            </h3>
             {quiz.questions[currentQuestion].answers.map((answer, index) => (
               <div key={index}>
                 <input
+                  className='quiz-checkbox'
                   type='checkbox'
                   value={answer.answer}
                   onChange={() => setOptionChosen(answer.correct)}
@@ -74,12 +83,15 @@ const QuizPage = () => {
           </div>
         </div>
       ) : quiz.questions[currentQuestion].type === 'trueFalse' ? (
-        <div>
-          <h1>{quiz.title}</h1>
+        <div className='quiz-container'>
+          <h1 className='quiz-title'>{quiz.title}</h1>
           <div className='trueFalse'>
-            <h3>{quiz.questions[currentQuestion].question}</h3>
+            <h3 className='quiz-question'>
+              {quiz.questions[currentQuestion].question}
+            </h3>
             {quiz.questions[currentQuestion].answers.map((answer, index) => (
               <button
+                className='quiz-answer-btn'
                 key={index}
                 onClick={() => setOptionChosen(answer.correct)}>
                 {answer.answer}
@@ -88,11 +100,14 @@ const QuizPage = () => {
           </div>
         </div>
       ) : quiz.questions[currentQuestion].type === 'shortAnswer' ? (
-        <div>
-          <h1>{quiz.title}</h1>
+        <div className='quiz-container'>
+          <h1 className='quiz-title'>{quiz.title}</h1>
           <div className='shortAnswer'>
-            <h3>{quiz.questions[currentQuestion].question}</h3>
+            <h3 className='quiz-question'>
+              {quiz.questions[currentQuestion].question}
+            </h3>
             <input
+              className='quiz-input-text'
               type='text'
               onChange={(event) => {
                 if (
@@ -108,13 +123,18 @@ const QuizPage = () => {
           </div>
         </div>
       ) : quiz.questions[currentQuestion].type === 'selectFromList' ? (
-        <div>
-          <h1>{quiz.title}</h1>
+        <div className=' quiz-container'>
+          <h1 className='quiz-title'>{quiz.title}</h1>
           <div className='selectFromList'>
-            <h3>{quiz.questions[currentQuestion].question}</h3>
+            <h3 className='quiz question'>
+              {quiz.questions[currentQuestion].question}
+            </h3>
             <select onChange={(e) => setOptionChosen(e.target.value)}>
               {quiz.questions[currentQuestion].answers.map((answer, index) => (
-                <option key={index} value={answer.answer}>
+                <option
+                  className='quiz-answer-option'
+                  key={index}
+                  value={answer.answer}>
                   {answer.answer}
                 </option>
               ))}
@@ -122,11 +142,14 @@ const QuizPage = () => {
           </div>
         </div>
       ) : quiz.questions[currentQuestion].type === 'fillInTheBlank' ? (
-        <div>
-          <h1>{quiz.title}</h1>
+        <div className='quiz-container'>
+          <h1 className='quiz-title'>{quiz.title}</h1>
           <div className='fillInTheBlank'>
-            <h3>{quiz.questions[currentQuestion].question}</h3>
+            <h3 className='quiz-question'>
+              {quiz.questions[currentQuestion].question}
+            </h3>
             <input
+              className='quiz-input-text'
               type='text'
               onChange={(event) => {
                 if (
@@ -147,10 +170,14 @@ const QuizPage = () => {
 
       {currentQuestion === quiz.questions.length - 1 ? (
         <Link to='/scoreBoard'>
-          <button onClick={nexQuestion}>Finish</button>
+          <button className='quiz-finish-btn' onClick={nexQuestion}>
+            Finish
+          </button>
         </Link>
       ) : (
-        <button onClick={nexQuestion}> NEXT</button>
+        <button className='quiz-next-btn' onClick={nexQuestion}>
+          NEXT
+        </button>
       )}
     </>
   );
