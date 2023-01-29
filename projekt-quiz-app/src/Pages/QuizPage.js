@@ -1,3 +1,4 @@
+import '../styles/quizPage.scss';
 import React, { useState, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import quizzes from '../helpers/quizzes.json';
@@ -45,124 +46,107 @@ const QuizPage = () => {
 
   return (
     <>
+      <h1 className='quiz-title'>{quiz.title}</h1>
       {quiz.questions[currentQuestion].type === 'singleChoice' ? (
         <div className='quiz-container'>
-          <h1 className='quiz-title'>{quiz.title}</h1>
-          <div className='singleChoice'>
-            <h3 className='quiz-question'>
-              {quiz.questions[currentQuestion].question}
-            </h3>
-            {quiz.questions[currentQuestion].answers.map((answer, index) => (
-              <button
-                className='quiz-answer-btn'
-                key={index}
-                onClick={() => setOptionChosen(answer.correct)}>
-                {answer.answer}
-              </button>
-            ))}
-          </div>
+          <h3 className='quiz-question'>
+            {quiz.questions[currentQuestion].question}
+          </h3>
+          {quiz.questions[currentQuestion].answers.map((answer, index) => (
+            <button
+              className='quiz-answer-btn'
+              key={index}
+              onClick={() => setOptionChosen(answer.correct)}>
+              {answer.answer}
+            </button>
+          ))}
         </div>
       ) : quiz.questions[currentQuestion].type === 'multipleChoice' ? (
         <div className='quiz-container'>
-          <h1 className='quiz-title'>{quiz.title}</h1>
-          <div className='multipleChoice'>
-            <h3 className='quiz-question'>
-              {quiz.questions[currentQuestion].question}
-            </h3>
-            {quiz.questions[currentQuestion].answers.map((answer, index) => (
-              <div key={index}>
-                <input
-                  className='quiz-checkbox'
-                  type='checkbox'
-                  value={answer.answer}
-                  onChange={() => setOptionChosen(answer.correct)}
-                />
-                {answer.answer}
-              </div>
-            ))}
-          </div>
+          <h3 className='quiz-question'>
+            {quiz.questions[currentQuestion].question}
+          </h3>
+          {quiz.questions[currentQuestion].answers.map((answer, index) => (
+            <div key={index}>
+              <input
+                className='quiz-checkbox'
+                type='checkbox'
+                value={answer.answer}
+                onChange={() => setOptionChosen(answer.correct)}
+              />
+              {answer.answer}
+            </div>
+          ))}
         </div>
       ) : quiz.questions[currentQuestion].type === 'trueFalse' ? (
         <div className='quiz-container'>
-          <h1 className='quiz-title'>{quiz.title}</h1>
-          <div className='trueFalse'>
-            <h3 className='quiz-question'>
-              {quiz.questions[currentQuestion].question}
-            </h3>
-            {quiz.questions[currentQuestion].answers.map((answer, index) => (
-              <button
-                className='quiz-answer-btn'
-                key={index}
-                onClick={() => setOptionChosen(answer.correct)}>
-                {answer.answer}
-              </button>
-            ))}
-          </div>
+          <h3 className='quiz-question'>
+            {quiz.questions[currentQuestion].question}
+          </h3>
+          {quiz.questions[currentQuestion].answers.map((answer, index) => (
+            <button
+              className='quiz-answer-btn'
+              key={index}
+              onClick={() => setOptionChosen(answer.correct)}>
+              {answer.answer}
+            </button>
+          ))}
         </div>
       ) : quiz.questions[currentQuestion].type === 'shortAnswer' ? (
         <div className='quiz-container'>
-          <h1 className='quiz-title'>{quiz.title}</h1>
-          <div className='shortAnswer'>
-            <h3 className='quiz-question'>
-              {quiz.questions[currentQuestion].question}
-            </h3>
-            <input
-              className='quiz-input-text'
-              type='text'
-              onChange={(event) => {
-                if (
-                  event.target.value ===
-                  quiz.questions[currentQuestion].answers[0].answer
-                ) {
-                  setOptionChosen(
-                    quiz.questions[currentQuestion].answers[0].correct
-                  );
-                }
-              }}
-            />
-          </div>
+          <h3 className='quiz-question'>
+            {quiz.questions[currentQuestion].question}
+          </h3>
+          <input
+            className='quiz-input-text'
+            type='text'
+            onChange={(event) => {
+              if (
+                event.target.value ===
+                quiz.questions[currentQuestion].answers[0].answer
+              ) {
+                setOptionChosen(
+                  quiz.questions[currentQuestion].answers[0].correct
+                );
+              }
+            }}
+          />
         </div>
       ) : quiz.questions[currentQuestion].type === 'selectFromList' ? (
         <div className=' quiz-container'>
-          <h1 className='quiz-title'>{quiz.title}</h1>
-          <div className='selectFromList'>
-            <h3 className='quiz question'>
-              {quiz.questions[currentQuestion].question}
-            </h3>
-            <select onChange={(e) => setOptionChosen(e.target.value)}>
-              {quiz.questions[currentQuestion].answers.map((answer, index) => (
-                <option
-                  className='quiz-answer-option'
-                  key={index}
-                  value={answer.answer}>
-                  {answer.answer}
-                </option>
-              ))}
-            </select>
-          </div>
+          <h3 className='quiz question'>
+            {quiz.questions[currentQuestion].question}
+          </h3>
+          <select onChange={(e) => setOptionChosen(e.target.value)}>
+            {quiz.questions[currentQuestion].answers.map((answer, index) => (
+              <option
+                className='quiz-answer-option'
+                key={index}
+                value={answer.answer}>
+                {answer.answer}
+              </option>
+            ))}
+          </select>
         </div>
       ) : quiz.questions[currentQuestion].type === 'fillInTheBlank' ? (
         <div className='quiz-container'>
-          <h1 className='quiz-title'>{quiz.title}</h1>
-          <div className='fillInTheBlank'>
-            <h3 className='quiz-question'>
-              {quiz.questions[currentQuestion].question}
-            </h3>
-            <input
-              className='quiz-input-text'
-              type='text'
-              onChange={(event) => {
-                if (
-                  event.target.value ===
-                  quiz.questions[currentQuestion].answers[0].answer
-                ) {
-                  setOptionChosen(
-                    quiz.questions[currentQuestion].answers[0].correct
-                  );
-                }
-              }}
-            />
-          </div>
+          <h3 className='quiz-question'>
+            {quiz.questions[currentQuestion].question}
+          </h3>
+          <input
+            className='quiz-input-text'
+            type='text'
+            onChange={(event) => {
+              if (
+                event.target.value ===
+                quiz.questions[currentQuestion].answers[0].answer
+              ) {
+                setOptionChosen(
+                  quiz.questions[currentQuestion].answers[0].correct
+                );
+              }
+            }}
+          />
         </div>
       ) : (
         <></>

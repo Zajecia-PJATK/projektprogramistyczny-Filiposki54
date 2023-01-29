@@ -1,0 +1,50 @@
+@import './varibles.scss';
+
+.name-prompt-container {
+}
+.name-prompt-label {
+}
+
+.quiz-container {
+  width: 50%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $yellow;
+  border-radius: $border-radius;
+}
+
+.quiz-title {
+}
+
+.quiz-question {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+.quiz-checkbox {
+  margin-top: 10px;
+}
+.quiz-input-text {
+  margin-top: 10px;
+}
+.quiz-answer-option {
+  margin-top: 10px;
+}
+
+.name-prompt-btn-submit {
+  margin-top: 10px;
+}
+.quiz-answer-btn {
+  margin-top: 10px;
+  width: 25%;
+  height: 30px;
+}
+.quiz-finish-btn {
+  margin-top: 10px;
+}
+.quiz-next-btn {
+  margin-top: 10px;
+}

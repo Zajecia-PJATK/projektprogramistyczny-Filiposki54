@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+$Rubik: 'Rubik', sans-serif;
+
+//colors
+$green: #cde9d6;
+$blue: #d2e4fd;
+$yellow: #fff1cb;
+$pink: #f8d3cf;
+
+//spacing
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+//border-radius
+$border-radius: 12px;
+
+@mixin breakpoints($point) {
+  @if $point == md {
+    //768
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+}
