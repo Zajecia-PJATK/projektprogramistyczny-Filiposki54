@@ -8,10 +8,6 @@ const Menu = () => {
       <Link to='/quizList'>
         <span className='menu-link'>Zagraj</span>
       </Link>
-      <br></br>
-      <Link to='/addQuiz'>
-        <samp className='menu-link'>Dodaj własny Quiz</samp>
-      </Link>
     </div>
   );
 };

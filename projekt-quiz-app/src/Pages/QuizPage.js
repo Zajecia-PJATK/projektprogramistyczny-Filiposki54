@@ -20,7 +20,6 @@ const QuizPage = () => {
       setScore(score + 1);
     }
     setCurrentQuestion(currentQuestion + 1);
-    alert(score);
   };
 
   const handleChange = (event) => {
