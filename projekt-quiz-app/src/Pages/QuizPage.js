@@ -94,7 +94,16 @@ const QuizPage = () => {
             <h3>{quiz.questions[currentQuestion].question}</h3>
             <input
               type='text'
-              onChange={(event) => setOptionChosen(event.target.value)}
+              onChange={(event) => {
+                if (
+                  event.target.value ===
+                  quiz.questions[currentQuestion].answers[0].answer
+                ) {
+                  setOptionChosen(
+                    quiz.questions[currentQuestion].answers[0].correct
+                  );
+                }
+              }}
             />
           </div>
         </div>
@@ -117,12 +126,19 @@ const QuizPage = () => {
           <h1>{quiz.title}</h1>
           <div className='fillInTheBlank'>
             <h3>{quiz.questions[currentQuestion].question}</h3>
-            <form>
-              <input
-                type='text'
-                onChange={(event) => setOptionChosen(event.target.value)}
-              />
-            </form>
+            <input
+              type='text'
+              onChange={(event) => {
+                if (
+                  event.target.value ===
+                  quiz.questions[currentQuestion].answers[0].answer
+                ) {
+                  setOptionChosen(
+                    quiz.questions[currentQuestion].answers[0].correct
+                  );
+                }
+              }}
+            />
           </div>
         </div>
       ) : (
