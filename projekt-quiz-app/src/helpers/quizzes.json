@@ -1,6 +1,6 @@
 [
   {
-    "title": "Math Quiz",
+    "title": "Mixed Quiz",
     "questions": [
       {
         "question": "What is the result of 2+2?",
@@ -13,24 +13,45 @@
         ]
       },
       {
-        "question": "What is the result of 5*5?",
-        "type": "singleChoice",
+        "question": "Select all the prime numbers from the following list: [4, 6, 8, 9, 11, 13, 15]",
+        "type": "multipleChoice",
         "answers": [
-          { "answer": "25", "correct": true },
-          { "answer": "30", "correct": false },
-          { "answer": "35", "correct": false },
-          { "answer": "40", "correct": false }
+          { "answer": "4", "correct": false },
+          { "answer": "6", "correct": false },
+          { "answer": "8", "correct": false },
+          { "answer": "9", "correct": false },
+          { "answer": "11", "correct": true },
+          { "answer": "13", "correct": true },
+          { "answer": "15", "correct": false }
         ]
       },
       {
-        "question": "What is the result of 8/2?",
-        "type": "singleChoice",
+        "question": "Is the statement '2+2=5' true or false?",
+        "type": "trueFalse",
         "answers": [
-          { "answer": "4", "correct": true },
-          { "answer": "3", "correct": false },
-          { "answer": "2", "correct": false },
-          { "answer": "6", "correct": false }
+          { "answer": "True", "correct": false },
+          { "answer": "False", "correct": true }
         ]
+      },
+      {
+        "question": "What is the capital of France?",
+        "type": "shortAnswer",
+        "answers": [{ "answer": "Paris", "correct": true }]
+      },
+      {
+        "question": "Select the correct word to complete the sentence: The sky is _____.",
+        "type": "selectFromList",
+        "answers": [
+          { "answer": "blue", "correct": true },
+          { "answer": "green", "correct": false },
+          { "answer": "red", "correct": false },
+          { "answer": "yellow", "correct": false }
+        ]
+      },
+      {
+        "question": "Fill in the blank: The capital of _____ is Paris.",
+        "type": "fillInTheBlank",
+        "answers": [{ "answer": "France", "correct": true }]
       }
     ]
   },
