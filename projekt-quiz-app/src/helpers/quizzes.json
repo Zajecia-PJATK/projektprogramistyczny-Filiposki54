@@ -1,0 +1,168 @@
+[
+  {
+    "title": "Mixed Quiz",
+    "questions": [
+      {
+        "question": "What is the result of 2+2?",
+        "type": "singleChoice",
+        "answers": [
+          { "answer": "4", "correct": true },
+          { "answer": "6", "correct": false },
+          { "answer": "8", "correct": false },
+          { "answer": "10", "correct": false }
+        ]
+      },
+      {
+        "question": "Select all the prime numbers from the following list: [4, 6, 8, 9, 11, 13, 15]",
+        "type": "multipleChoice",
+        "answers": [
+          { "answer": "4", "correct": false },
+          { "answer": "6", "correct": false },
+          { "answer": "8", "correct": false },
+          { "answer": "9", "correct": false },
+          { "answer": "11", "correct": true },
+          { "answer": "13", "correct": true },
+          { "answer": "15", "correct": false }
+        ]
+      },
+      {
+        "question": "Is the statement '2+2=5' true or false?",
+        "type": "trueFalse",
+        "answers": [
+          { "answer": "True", "correct": false },
+          { "answer": "False", "correct": true }
+        ]
+      },
+      {
+        "question": "What is the capital of France?",
+        "type": "shortAnswer",
+        "answers": [{ "answer": "Paris", "correct": true }]
+      },
+      {
+        "question": "Select the correct word to complete the sentence: The sky is _____.",
+        "type": "selectFromList",
+        "answers": [
+          { "answer": "blue", "correct": true },
+          { "answer": "green", "correct": false },
+          { "answer": "red", "correct": false },
+          { "answer": "yellow", "correct": false }
+        ]
+      },
+      {
+        "question": "Fill in the blank: The capital of _____ is Paris.",
+        "type": "fillInTheBlank",
+        "answers": [{ "answer": "France", "correct": true }]
+      }
+    ]
+  },
+  {
+    "title": "Geography Quiz",
+    "questions": [
+      {
+        "question": "Which is the largest continent?",
+        "type": "singleChoice",
+        "answers": [
+          { "answer": "Africa", "correct": false },
+          { "answer": "Asia", "correct": true },
+          { "answer": "Europe", "correct": false },
+          { "answer": "North America", "correct": false }
+        ]
+      },
+      {
+        "question": "Select all the oceans from the following list: [Atlantic, Pacific, Indian, Arctic, Southern]",
+        "type": "multipleChoice",
+        "answers": [
+          { "answer": "Atlantic", "correct": true },
+          { "answer": "Pacific", "correct": true },
+          { "answer": "Indian", "correct": true },
+          { "answer": "Arctic", "correct": true },
+          { "answer": "Southern", "correct": false }
+        ]
+      },
+      {
+        "question": "Is the statement 'Africa is the smallest continent' true or false?",
+        "type": "trueFalse",
+        "answers": [
+          { "answer": "True", "correct": false },
+          { "answer": "False", "correct": true }
+        ]
+      },
+      {
+        "question": "What is the capital of Australia?",
+        "type": "shortAnswer",
+        "answers": [{ "answer": "Canberra", "correct": true }]
+      },
+      {
+        "question": "Select the correct word to complete the sentence: The Amazon River is located in _____.",
+        "type": "selectFromList",
+        "answers": [
+          { "answer": "Africa", "correct": false },
+          { "answer": "Asia", "correct": false },
+          { "answer": "Europe", "correct": false },
+          { "answer": "South America", "correct": true }
+        ]
+      },
+      {
+        "question": "Fill in the blank: The capital of _____ is Canberra.",
+        "type": "fillInTheBlank",
+        "answers": [{ "answer": "Australia", "correct": true }]
+      }
+    ]
+  },
+  {
+    "title": "History Quiz",
+    "questions": [
+      {
+        "question": "Who was the first President of the United States?",
+        "type": "singleChoice",
+        "answers": [
+          { "answer": "George Washington", "correct": true },
+          { "answer": "Thomas Jefferson", "correct": false },
+          { "answer": "Abraham Lincoln", "correct": false },
+          { "answer": "Franklin D. Roosevelt", "correct": false }
+        ]
+      },
+      {
+        "question": "Which of the following countries were not part of the Axis powers in World War II?",
+        "type": "multipleChoice",
+        "answers": [
+          { "answer": "Germany", "correct": false },
+          { "answer": "Italy", "correct": false },
+          { "answer": "Japan", "correct": false },
+          { "answer": "United States", "correct": true },
+          { "answer": "Soviet Union", "correct": true }
+        ]
+      },
+      {
+        "question": "Is the statement 'The American Revolution began in 1776' true or false?",
+        "type": "trueFalse",
+        "answers": [
+          { "answer": "True", "correct": true },
+          { "answer": "False", "correct": false }
+        ]
+      },
+      {
+        "question": "Who wrote the Communist Manifesto?",
+        "type": "shortAnswer",
+        "answers": [
+          { "answer": "Karl Marx and Friedrich Engels", "correct": true }
+        ]
+      },
+      {
+        "question": "Select the correct name for the period of European history known as the 'Dark Ages'",
+        "type": "selectFromList",
+        "answers": [
+          { "answer": "Middle Ages", "correct": false },
+          { "answer": "Ancient Times", "correct": false },
+          { "answer": "Early Modern Period", "correct": false },
+          { "answer": "Dark Ages", "correct": true }
+        ]
+      },
+      {
+        "question": "Fill in the blank: The _____ War was fought between the United States and Mexico.",
+        "type": "fillInTheBlank",
+        "answers": [{ "answer": "Mexican-American", "correct": true }]
+      }
+    ]
+  }
+]
